@@ -10,7 +10,7 @@ Os dados são apresentados em um **display OLED SSD1306**, a **matriz de LEDs WS
 ## 🛠️ Componentes Utilizados
 
 * **Microcontrolador:** Raspberry Pi Pico (Placa BitDogLab)
-* **Sensores analógicos:** Nível da água e volume de chuva (via ADC)
+* **Sensores analógicos (Joystick):** Nível da água e volume de chuva (via ADC)
 * **Display OLED SSD1306** (via I2C, para exibição dos dados em tempo real)
 * **Matriz de LEDs WS2812** (animação gráfica do nível de enchente, controlada via PIO)
 * **LED RGB** (indicação visual do estado atual: seguro, alerta ou enchente)
@@ -29,9 +29,9 @@ Os dados são apresentados em um **display OLED SSD1306**, a **matriz de LEDs WS
 ## 📄 Estrutura do Projeto
 
 * `Principal.c` → Código principal com todas as tarefas do FreeRTOS
-* `desenhosMatriz.h` / `desenhosMatriz.c` → Funções gráficas para a matriz WS2812
+* `desenhosMatriz.h` / `matrizled.c` → Funções gráficas para a matriz WS2812
 * `font.h` / `ssd1306.h` → Controle e renderização no display OLED
-* `pio_matrix.pio` → Programa PIO para controle da matriz de LEDs WS2812
+* `ws2818b.pio` → Programa PIO para controle da matriz de LEDs WS2812
 * `README.md` → Documentação do projeto
 
 ## 🖥️ Como Executar o Projeto
